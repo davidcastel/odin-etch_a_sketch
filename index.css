@@ -36,3 +36,9 @@ main {
     height: 60%;
     margin: auto;
 }
+
+td {
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+}
