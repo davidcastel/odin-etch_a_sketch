@@ -1,8 +1,6 @@
-const CREATE_TABLE = () => {
+const CREATE_TABLE = (tsize = 16) => {
     const parent = document.querySelector('#grid-template');
 
-    const tsize = 16;
-    
     for (let row = 0; row < tsize; row++) {
         let tr = document.createElement('tr');
         for (let col = 0; col < tsize; col++) {
