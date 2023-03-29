@@ -13,4 +13,15 @@ const CREATE_TABLE = () => {
     }
 }
 
+const HOVER_TABLE = () => {
+    const BLOCKS = document.querySelectorAll('td');
+
+    BLOCKS.forEach(block => {
+        block.addEventListener('mouseover', () => {
+            block.classList.add('active');
+        })
+    })
+}
+
 CREATE_TABLE();
+HOVER_TABLE();
