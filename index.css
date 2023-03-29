@@ -47,3 +47,11 @@ td {
 .active {
     background-color: red;
 }
+
+.success {
+    color: green;
+}
+
+.fail {
+    color: red;
+}
