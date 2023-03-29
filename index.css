@@ -1,5 +1,31 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    border: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+html {
+    -webkit-text-size-adjust: none; /* for iOS Safari */
+    text-size-adjust: none; /* for other mobile browsers */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
 main {
-    
+    height: 100vh;
 }
 
 .container {
@@ -8,4 +34,5 @@ main {
     border-style: solid;
     width: 80%;
     height: 60%;
+    margin: auto;
 }
