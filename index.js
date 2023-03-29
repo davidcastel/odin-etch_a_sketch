@@ -23,5 +23,16 @@ const HOVER_TABLE = () => {
     })
 }
 
+const GET_USER_GRID_SIZE = () => {
+    const FORM = document.getElementById('gridSizeForm');
+    const MAX = 100;
+    FORM.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const SIZE = FORM.elements['size'].value;
+        if (SIZE > MAX) return -1;
+        return SIZE;
+    })
+}
+
 CREATE_TABLE();
 HOVER_TABLE();
