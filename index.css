@@ -1,0 +1,11 @@
+main {
+    
+}
+
+.container {
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    width: 80%;
+    height: 60%;
+}
