@@ -21,16 +21,22 @@ const HOVER_TABLE = () => {
     })
 }
 
-const GET_USER_GRID_SIZE = () => {
-    const FORM = document.getElementById('gridSizeForm');
-    const MAX = 100;
-    FORM.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const SIZE = FORM.elements['size'].value;
-        if (SIZE > MAX) return -1;
-        return SIZE;
+const GENERATE_USER_SIZE_TABLE = () => {
+    const btn = document.getElementById('enter');
+    
+    const size = document.querySelector('#size');
+    btn.addEventListener('click', () => {
+        const parent = document.querySelector('#grid-template');
+
+        while (parent.hasChildNodes()) {
+            parent.removeChild(parent.firstChild);
+        }
+
+        CREATE_TABLE(size.value);
+        HOVER_TABLE();
     })
 }
 
 CREATE_TABLE();
 HOVER_TABLE();
+GENERATE_USER_SIZE_TABLE();
