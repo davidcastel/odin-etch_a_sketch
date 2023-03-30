@@ -9,6 +9,7 @@ const CREATE_TABLE = (tsize = 16) => {
         }
         parent.appendChild(tr);
     }
+    HOVER_TABLE();
 }
 
 const HOVER_TABLE = () => {
@@ -33,10 +34,8 @@ const GENERATE_USER_SIZE_TABLE = () => {
         }
 
         CREATE_TABLE(size.value);
-        HOVER_TABLE();
     })
 }
 
 CREATE_TABLE();
-HOVER_TABLE();
 GENERATE_USER_SIZE_TABLE();
