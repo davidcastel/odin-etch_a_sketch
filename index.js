@@ -24,15 +24,18 @@ const HOVER_TABLE = () => {
 
 const GENERATE_USER_SIZE_TABLE = () => {
     const btn = document.getElementById('enter');
-    
     const input = document.querySelector('#size');
+    const MSG = document.querySelector('#form-message');
+
     const MAX = 100;
     btn.addEventListener('click', () => {
         let size = input.value;
 
         if (size > MAX) {
             // error
-            console.log('Number is too big, please type a new number')
+            MSG.classList.remove('success');
+            MSG.classList.add('fail');
+            MSG.textContent = "Number is too big, please type a new number";
         } else {
             // success
             const parent = document.querySelector('#grid-template');
@@ -40,6 +43,9 @@ const GENERATE_USER_SIZE_TABLE = () => {
             while (parent.hasChildNodes()) {
                 parent.removeChild(parent.firstChild);
             }
+
+            MSG.classList.remove('fail');
+            MSG.textContent = "";
     
             CREATE_TABLE(size);
         }
