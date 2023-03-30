@@ -25,15 +25,17 @@ const HOVER_TABLE = () => {
 const GENERATE_USER_SIZE_TABLE = () => {
     const btn = document.getElementById('enter');
     
-    const size = document.querySelector('#size');
+    const input = document.querySelector('#size');
     btn.addEventListener('click', () => {
+        let size = input.value;
+        
         const parent = document.querySelector('#grid-template');
 
         while (parent.hasChildNodes()) {
             parent.removeChild(parent.firstChild);
         }
 
-        CREATE_TABLE(size.value);
+        CREATE_TABLE(size);
     })
 }
 
