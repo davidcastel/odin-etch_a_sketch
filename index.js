@@ -26,16 +26,23 @@ const GENERATE_USER_SIZE_TABLE = () => {
     const btn = document.getElementById('enter');
     
     const input = document.querySelector('#size');
+    const MAX = 100;
     btn.addEventListener('click', () => {
         let size = input.value;
-        
-        const parent = document.querySelector('#grid-template');
 
-        while (parent.hasChildNodes()) {
-            parent.removeChild(parent.firstChild);
+        if (size > MAX) {
+            // error
+            console.log('Number is too big, please type a new number')
+        } else {
+            // success
+            const parent = document.querySelector('#grid-template');
+    
+            while (parent.hasChildNodes()) {
+                parent.removeChild(parent.firstChild);
+            }
+    
+            CREATE_TABLE(size);
         }
-
-        CREATE_TABLE(size);
     })
 }
 
